@@ -18,7 +18,9 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('http://localhost:3000/api/blogs')
+        const res = await fetch(
+          'https://nextjs-with-payload-dep3arj1c-md-ataullahs-projects.vercel.app/api/blogs',
+        )
         if (!res.ok) {
           throw new Error('Failed to fetch data')
         }
@@ -35,7 +37,12 @@ export default function Home() {
   console.log('Blogs Data >>>>>>>>>', data?.docs)
 
   if (isLoading) return <p>Loading...</p>
-  if (!data) return <p>No profile data</p>
+  if (!data)
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-black text-white text-3xl">
+        <p>Kono Data nay</p>
+      </div>
+    )
 
   return (
     <div className="bg-gray-900 text-white">
