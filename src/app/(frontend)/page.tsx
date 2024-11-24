@@ -36,7 +36,12 @@ export default function Home() {
 
   console.log('Blogs Data >>>>>>>>>', data?.docs)
 
-  if (isLoading) return <p>Loading...</p>
+  if (isLoading)
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-black text-white text-2xl">
+        <p>Loading...</p>
+      </div>
+    )
   if (!data)
     return (
       <div className="min-h-screen flex items-center justify-center bg-black text-white text-3xl">
