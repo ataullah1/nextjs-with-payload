@@ -19,7 +19,7 @@ export default function Home() {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          'https://nextjs-with-payload-dep3arj1c-md-ataullahs-projects.vercel.app/api/blogs',
+          'https://nextjs-with-payload-2vqoxofdp-md-ataullahs-projects.vercel.app/api/blogs',
         )
         if (!res.ok) {
           throw new Error('Failed to fetch data')
